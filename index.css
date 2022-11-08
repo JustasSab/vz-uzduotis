@@ -17,7 +17,7 @@ body {
 }
 
 .bg-curve {
-  background-image: url("/assets/curve.png");
+  background-image: url("assets/curve.png");
   background-repeat: no-repeat;
 }
 
