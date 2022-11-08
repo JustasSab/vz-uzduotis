@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// Fonts
+$font-primary: 'Poppins', sans-serif;
+
+// Colors
+$color-primary: #e62a32;
+$color-secondary: #fff;
+
+@mixin btn {
+    border: none;
+    border-radius: 30px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-primary;
+}
+.container {
+    position: relative;
+    max-width: 1170px;
+    margin: auto;
+}
+.bg-curve {
+    background-image: url("/assets/curve.png");
+    background-repeat: no-repeat;
+}
+/* Main Navigation and Header */
+.header{
+    height: 800px;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        .brand {
+            padding-top: 32px;
+            img { 
+                height: 40px;
+            }
+        }
+        .button {
+            background: transparent;
+            padding: 9px 25px;
+            color: $color-secondary;
+            border: 1px solid $color-secondary;
+            border-radius: 18px;
+            outline: none;
+            font-size: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+    .header-content  {
+        color: $color-secondary;
+        margin-top: 80px;
+        h1 {
+            font-size: 80px;
+        }
+        .sub-title {
+            font-size: 60px;
+            line-height: 40px;
+
+        }
+        .line {
+            margin: 60px 0 50px 0;
+            background-color: $color-secondary;
+            width: 170px;
+            height: 8px; 
+        }
+        .description {
+            font-size: 28px;
+            width: 470px;
+            line-height: 1.286;
+            margin-bottom: 100px;
+        }          
+        .button {
+            @include btn;
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+        .CTA-white {
+            background-color: $color-secondary;
+            color: #e62a32;
+            box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.25);
+            margin-right: 30px;
+        }        
+        .CTA-red {
+            background-color: rgba(255, 255, 255, 0.302);
+            color: $color-secondary;
+            padding: 20px 60px;
+        }
+    }
+}
+// Tool Section
+.tool {
+    background-image: url("assets/dots.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+}
+.container {
+    .card-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: 130px;
+        padding-top: 150px;
+        margin-bottom: 70px;
+        .card {
+            text-align: center;
+            p {
+                width: 250px;
+                padding-top: 10px;
+            }
+        }
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: rgb(58, 58, 58);
+        text-align: center;
+        margin: auto;
+        width: 65%;
+        padding-bottom: 150px;
+    }  
+}
+// Form
+.contact-form {
+    background-color: #e62a32;
+    height: 913px;
+    text-align: center;
+    position: relative;
+    .form-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        form {
+            margin: auto;
+            width: 500px;
+
+            .form-title {
+                font-size: 42px;
+                color: $color-secondary;
+                margin-bottom: 50px;
+            }
+            .form-field {
+                margin-bottom: 40px; 
+                label {
+                    font-size: 14px;
+                    color: $color-secondary;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    float: left;
+                    margin: 5px 0;
+                }
+                input[type=text] {
+                    border: none;
+                    outline: none;
+                    display: block;
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 20px 20px;
+                    border-radius: 4px;
+                }
+            }
+            .button {
+                @include btn;
+                width: 200px;
+                margin: auto;
+            }
+            .CTA-white {
+                background-color: $color-secondary;
+                color: #e62a32;
+                box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.25);
+            }
+        }
+    } 
+}
+// Team Section
+.team {
+    background-color: rgb(247, 253, 254);
+    height: 834px;
+    display: flex;
+    text-align: center;
+    .container {
+        p {
+            font-size: 42px;
+            margin-bottom: 100px;
+            font-weight: bold;
+        }
+        .team-cards {
+            .team-member {
+                background-color: $color-secondary;
+                box-shadow: 0px 0px 40px 0px rgba(34, 34, 34, 0.05);
+                width: 310px;
+                height: 380px;
+                border-bottom: 4px solid #e62a32;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .team-member-info {
+                    padding: 20px;
+                    font-size: 14px;
+                    line-height: 1.714;
+                    .team-member-name {
+                        margin: 50px 0 10px;
+                        font-weight: bold;
+                        color: rgb(58, 58, 58);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+                    .team-member-role {
+                        color: rgb(153, 153, 153);
+                        margin-bottom: 30px;
+                    }
+                    .team-member-description {
+                        color: rgb(58, 58, 58);
+                    }
+                }
+            }
+        }
+        .swiper {
+            padding-top: 50px;
+        }
+        .mySwiper {
+            height: 500px;
+            width: 900px;
+        }
+    }
+}
+.swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+}
+.swiper-pagination-bullet-active {
+    background: #e62a32;
+    height: 10px;
+    width: 10px;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.1);
+    width: 60px;
+    height: 60px;
+}
+.swiper-button-next {
+    position: absolute;
+    top: 60%;
+    right: -80px;
+    border-radius: 15px 1px 15px 1px;
+}
+.swiper-button-prev {
+    position: absolute;
+    top: 60%;
+    left: -80px;
+    border-radius: 1px 15px 1px 15px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    display: none;
+}
+// Footer
+footer {
+    background-color: #e62a32;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .brand {
+            img { 
+                height: 35px;
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                list-style: none;
+                li {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        margin: 0 30px;
+    }
+    .header{
+        .header-content {
+            h1 {
+                font-size: 60px;
+            }
+            .sub-title {
+                font-size: 40px;
+                line-height: 1;
+            }
+        }
+    }
+    .tool {
+        background-repeat: repeat-y;
+    }
+    .container {
+        h3 {
+            line-height: 2;
+        }
+    }
+    .team {
+        .container {
+            margin: auto;
+            .team-cards {
+                .team-member {
+                    height: 380px;
+                    .team-member-info {
+                        padding: 20px;
+                        font-size: 14px;
+                        line-height: 1.714;
+                    }
+                }
+            }
+            .mySwiper {
+                width: 700px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .team {
+        .container {
+            margin: auto;
+            .mySwiper {
+                width: 300px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .bg-curve {
+        background-position: 80% 0%;
+    }
+    .header{
+        .navbar {
+            padding: 0px;
+            .brand {
+                padding-top: 32px;
+            }
+        }
+        .header-content {
+            h1 {
+                text-align: center;
+                font-size: 60px;
+            }
+            .sub-title {
+                text-align: center;
+                font-size: 30px;
+            }
+            .line {
+                margin: 40px 0;
+                width: 120px;
+                height: 12px;
+            }
+            .description {
+                font-size: 20px;
+                width: 95%;
+                margin-bottom: 70px;
+            }
+            .CTA-white {
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+                margin: auto;
+            }
+            .CTA-red {
+                display: none;
+            }
+        }
+    }
+    .tool {
+        background-position: top;
+    }
+    .container {
+        .card-wrapper {
+            padding-top: 50px;
+            gap: 50px;
+        }
+    }
+    .contact-form {
+        .form-container {
+            width: 80%;
+            form {
+                width: 80%;
+                .form-title {
+                    line-height: 1.143;
+                    text-align: center;
+                }
+            }
+        } 
+    }
+    .team {
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .header{
+        .header-content {
+            margin-top: 40px;
+        }
+    }
+}

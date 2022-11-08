@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-curve">
+        <div class="container"> 
+            <div class="header">
+                <!-- Main Navigation -->
+                <div class="navbar">
+                    <div class="brand">
+                        <a href="#">
+                            <img src="/assets/logo.svg" alt="Verslo žinios">
+                        </a>
+                    </div>
+                    <a href="#" class="button">Contact Us</a>
+                </div>
+                <!-- Header -->
+                <div class="header-content">
+                    <h1>Verslo žinios</h1>
+                    <p class="sub-title">Galvojantiems savo galva</p>
+                    <div class="line"></div>
+                    <p class="description">From the leading manufacturer of goods for printing "ZEBRA"</p>
+                    <a href="#" class="button CTA-white">Pirkti Dabar</a>
+                    <a href="#" class="button CTA-red">Daugiau</a>
+                </div>
+            </div>
+        </div>
+        <!-- Tool Section -->
+        <div class="tool">
+            <div class="container"> 
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="/assets/printer.png" alt="printer">
+                        <p>Want to choose a universal and reliable equipment for card printing?</p>
+                    </div>
+                
+                    <div class="card">
+                        <img src="/assets/guarantee.png" alt="guarantee">
+                        <p>Need technical support, maintenance and warranty for printers?</p>
+                    </div>
+                    <div class="card">
+                        <img src="/assets/card.png" alt="card">
+                        <p>Need super-fast printers on plastic cards?</p>
+                    </div>
+                </div>
+                <h3>Choose really reliable equipment from «Verslo žinios» with full support from the dealer!</h3>
+            </div>
+        </div>
+        <!-- Form -->
+        <div class="contact-form">
+            <div class="form-container">
+                <form action="/" id="form" name="form">
+                    <p class="form-title">Kontaktų forma</p>
+                    <div class="form-field">
+                        <label for="fname">Vardas</label>
+                        <input type="text" id="firstname" name="firstname" minlength="4" required>
+                        <div class="error" id="error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label for="lname">Pavardė</label>
+                        <input type="text" id="lastname" name="lastname">
+                        <small class="error" id="error"></small>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">El.Paštas</label>
+                        <input type="text" id="email" name="email" minlength="4" required>
+                        <div class="error" id="error"></div>
+                    </div>
+                    <input type="submit" class="button CTA-white" value="Siųsti">
+                </form>
+            </div>
+        </div>
+        <!-- Team  -->
+        <div class="team">
+            <div class="container">
+                <p>Mūsų komanda</p>
+                <div class="swiper mySwiper" id="mySwiper">
+                    <div class="team-cards swiper-wrapper">
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo1.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">Rosaline Greene</div>
+                                <div class="team-member-role">Director of the «LifeStyle Co.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo2.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">Jospeh Knight</div>
+                                <div class="team-member-role">Director of the «Universal Pic.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                            </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo3.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">Anne Gregory</div>
+                                <div class="team-member-role">Director of the «MountCirce»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo1.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">4</div>
+                                <div class="team-member-role">Director of the «LifeStyle Co.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo2.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">5</div>
+                                <div class="team-member-role">Director of the «Universal Pic.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                            </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo3.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">6</div>
+                                <div class="team-member-role">Director of the «MountCirce»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo1.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">7</div>
+                                <div class="team-member-role">Director of the «LifeStyle Co.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo2.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">8</div>
+                                <div class="team-member-role">Director of the «Universal Pic.»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                            </div>
+                        <div class="team-member swiper-slide">
+                            <img src="/assets/photo3.png" alt="team member">
+                            <div class="team-member-info">
+                                <div class="team-member-name">9</div>
+                                <div class="team-member-role">Director of the «MountCirce»</div>
+                                <div class="team-member-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"><img src="/assets/active-dot.png" alt="pagination"></div>
+                </div>
+                <div class="swiper-button-next">
+                    <img class="swiper-button-img" src="/assets/arrow2.png" alt="next">
+                </div>
+                <div class="swiper-button-prev">
+                    <img class="swiper-button-img" src="/assets/arrow.png" alt="prev">
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="brand">
+                    <a href="#">
+                        <img src="/assets/logo.svg" alt="Verslo žinios">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="/assets/facebook.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="/assets/twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="/assets/googleplus.png" alt="googleplus"></a></li>
+                        <li><a href="#"><img src="/assets/linkedin.png" alt="linkedin"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
+
+</body>
+</html>
