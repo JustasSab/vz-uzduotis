@@ -90,7 +90,7 @@ body {
         }
         .CTA-white {
             background-color: $color-secondary;
-            color: #e62a32;
+            color: $color-primary;
             box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.25);
             margin-right: 30px;
         }        
@@ -137,7 +137,7 @@ body {
 }
 // Form
 .contact-form {
-    background-color: #e62a32;
+    background-color: $color-primary;
     height: 913px;
     text-align: center;
     position: relative;
@@ -191,7 +191,7 @@ body {
             }
             .CTA-white {
                 background-color: $color-secondary;
-                color: #e62a32;
+                color: $color-primary;
                 box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.25);
             }
         }
@@ -215,7 +215,7 @@ body {
                 box-shadow: 0px 0px 40px 0px rgba(34, 34, 34, 0.05);
                 width: 310px;
                 height: 380px;
-                border-bottom: 4px solid #e62a32;
+                border-bottom: 4px solid $color-primary;
                 position: relative;
                 img {
                     position: absolute;
@@ -257,7 +257,7 @@ body {
     height: 7px;
 }
 .swiper-pagination-bullet-active {
-    background: #e62a32;
+    background: $color-primary;
     height: 10px;
     width: 10px;
 }
@@ -286,7 +286,7 @@ body {
 }
 // Footer
 footer {
-    background-color: #e62a32;
+    background-color: $color-primary;
     .container {
         display: flex;
         justify-content: space-between;

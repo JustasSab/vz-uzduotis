@@ -22,6 +22,11 @@ const setSuccess = (element) => {
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
 }
+
+const validRegex = email => {
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
+}
 // Validation logic
 const validateInputs = () => {
     const firstnameValue = firstname.value.trim();
@@ -39,7 +44,9 @@ const validateInputs = () => {
         setError(email, 'Email is required!');
     } else if (emailValue.length < 4 ) {
         setError(email, 'Email must be at least 4 characters!')
-    } else {
+    } else if (!validRegex (emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else  {
         setSuccess(email);
     }
 }
