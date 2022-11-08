@@ -14,8 +14,8 @@ $color-secondary: #fff;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    cursor: pointer;
     width: 250px;
+    cursor: pointer;
 }
 * {
     margin: 0;
@@ -41,7 +41,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 30px;
         .brand {
             padding-top: 32px;
             img { 
@@ -151,14 +150,13 @@ body {
         form {
             margin: auto;
             width: 500px;
-
             .form-title {
                 font-size: 42px;
                 color: $color-secondary;
                 margin-bottom: 50px;
             }
             .form-field {
-                margin-bottom: 40px; 
+                margin-bottom: 40px;
                 label {
                     font-size: 14px;
                     color: $color-secondary;
@@ -175,6 +173,15 @@ body {
                     width: 100%;
                     padding: 20px 20px;
                     border-radius: 4px;
+                }
+                .error {
+                    float: left;
+                    color: $color-secondary;
+                    font-size: 12px;
+                    height: 13px;
+                }
+                .success {
+                    display: none;
                 }
             }
             .button {
@@ -404,6 +411,9 @@ footer {
             padding-top: 50px;
             gap: 50px;
         }
+        h3 {
+            width: 85%;
+        } 
     }
     .contact-form {
         .form-container {

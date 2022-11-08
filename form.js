@@ -1,86 +1,70 @@
-$(document).ready(function() {
-    $("#form").validate({
-    rules: {
-        firstname : {
-            required: true,
-            minlength: 4
-        },
-        email: {
-            required: true,
-            minlength: 4
-        },
-    },
-    messages: {
-        firstname: {
-            minlength: "Name should be at least 4 characters"
-        },
-        email: {
-            minlength: "Email should be at least 4 characters"
-        },
-        }
-    });
-});
+const firstname = document.getElementById("firstname");
+const email = document.getElementById("email");
+const form = document.getElementById("form");
 
+form.addEventListener('submit', e => {
+    e.preventDefault();
 
+    validateInputs();
+})
+const setError = (element, errMessage) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
-// const id = (id) => document.getElementById(id);
+    errorDisplay.innerText = errMessage;
+    inputControl.classList.add('error');
+}
+const setSuccess = (element) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
-// const classes = (classes) => document.getElementsByClassName(classes);
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
+// Validation logic
+const validateInputs = () => {
+    const firstnameValue = firstname.value.trim();
+    const emailValue = email.value.trim();
+    // Name
+    if(firstnameValue === '') {
+        setError(firstname, 'Name is required!');
+    } else if (firstnameValue.length < 4 ) {
+        setError(firstname, 'Name must be at least 4 characters!')
+    } else {
+        setSuccess(firstname);
+    }
+    // Email
+    if(emailValue === '') {
+        setError(email, 'Email is required!');
+    } else if (emailValue.length < 4 ) {
+        setError(email, 'Email must be at least 4 characters!')
+    } else {
+        setSuccess(email);
+    }
+}
 
-// let username = id("firstname"),
-//     email = id("email"),
-//     form = id("form"),
-//     errorMsg = classes("error")
+// JQuery Validation Library Rules
 
-//     form.addEventListener("submit", (e) => {
-//         e.preventDefault();
-
-//         formValidation(username, 0, "Name cannot be blank");
-//         formValidation(email, 2, "Email cannot be blank");
-//     });
-
-// let formValidation = (id, serial, message) => {
-//     if (id.value.trim() === "") {
-//         errorMsg[serial].innerHTML = message;
-//     } 
-//     else {
-//         errorMsg[serial].innerHTML = "";
-//     }
-// }
-
-
-
-
-// const first_name = document.getElementById('firstname');
-
-// const form = document.getElementById('form');
-// const errorMessage = document.getElementById('error');
-
-// form.addEventListener('submit', (e) => {
-//     let message = [];
-//     if (first_name.value === '' || first_name.value == null) {
-//         message.push('Name is req');
-//     }
-//     if (message.length > 0) {
-//         e.preventDefault();
-//     }
-// })
-
-
-
-
-// $(document).ready (function () {
-//     $('#form').submit (function (e) {
-//         e.preventDefault();
-//         var first_name = $('#firstname').val();
-//         var last_name = $('#lastname').val();
-//         var email = $('#email').val();
-//      $(".error").remove();
-//         if (first_name.length <= 4) {
-//             $('#firstname').after('<span class="error">This field is required</span>');
-//         }
-//         if (email.length <= 4) {
-//             $('#email').after('<span class="error">This field is required</span>');
+// $(document).ready(function() {
+//     $("#form").validate({
+//     rules: {
+//         firstname : {
+//             required: true,
+//             minlength: 4
+//         },
+//         email: {
+//             required: true,
+//             minlength: 4
+//         },
+//     },
+//     messages: {
+//         firstname: {
+//             minlength: "Name must be at least 4 characters!"
+//         },
+//         email: {
+//             minlength: "Email must be at least 4 characters!"
+//         },
 //         }
 //     });
-// })
+// });

@@ -36,7 +36,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 30px;
 }
 
 .header .navbar .brand {
@@ -96,8 +95,8 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  cursor: pointer;
   width: 250px;
+  cursor: pointer;
   text-decoration: none;
   letter-spacing: 3px;
 }
@@ -209,6 +208,17 @@ body {
   border-radius: 4px;
 }
 
+.contact-form .form-container form .form-field .error {
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  height: 13px;
+}
+
+.contact-form .form-container form .form-field .success {
+  display: none;
+}
+
 .contact-form .form-container form .button {
   border: none;
   border-radius: 30px;
@@ -217,8 +227,8 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  cursor: pointer;
   width: 250px;
+  cursor: pointer;
   width: 200px;
   margin: auto;
 }
@@ -454,6 +464,9 @@ footer .container nav ul li {
   .container .card-wrapper {
     padding-top: 50px;
     gap: 50px;
+  }
+  .container h3 {
+    width: 85%;
   }
   .contact-form .form-container {
     width: 80%;
